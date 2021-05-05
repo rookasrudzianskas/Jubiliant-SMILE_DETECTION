@@ -18,9 +18,12 @@ while True:
 
     faces = face_detector.detectMultiScale(frame_grayscale)
 
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (randint(256), randint(256), randint(256)), 5)
+
     print(faces)
 
-    cv2.imshow("Why so serious?", frame_grayscale)
+    cv2.imshow("Why so serious?", frame)
 
     cv2.waitKey(1)
 #
