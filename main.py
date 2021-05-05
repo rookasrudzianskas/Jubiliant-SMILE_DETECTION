@@ -19,7 +19,7 @@ while True:
     faces = face_detector.detectMultiScale(frame_grayscale)
 
     for (x, y, w, h) in faces:
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (randint(256), randint(256), randint(256)), 5)
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
 
     print(faces)
 
