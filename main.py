@@ -3,6 +3,7 @@ from random import randint
 
 
 face_detector = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+smile_detector = cv2.CascadeClassifier('haarcascade_smile.xml')
 
 webcam = cv2.VideoCapture(0)
 
@@ -17,8 +18,12 @@ while True:
     # faces = face_detector.detectMultiScale(frame_grayscale)
 
     faces = face_detector.detectMultiScale(frame_grayscale)
+    smiles = smile_detector.detectMultiScale(frame_grayscale)
 
     for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
+
+    for (x, y, w, h) in smiles:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
 
     print(faces)
