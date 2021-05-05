@@ -4,21 +4,17 @@ face_detector = cv2.CascadeClassifier('haarcascade_frontalcatface')
 
 webcam = cv2.VideoCapture(0)
 
-successful_frame_rate, frame = webcam.read()
+while True:
+    successful_frame_rate, frame = webcam.read()
 
-cv2.imshow("Why so seriour", frame)
+    if not successful_frame_rate:
+        break
+    cv2.imshow("Why so seriour", frame)
 
-cv2.waitKey()
-
-# while True:
+    cv2.waitKey(1)
 #
-#
-
-# webcam.release()
-# cv2.destroyAllWubdiws()
-
-
-
+webcam.release()
+cv2.destroyAllWindows()
 
 
 print("WHAT IS UP!!")
