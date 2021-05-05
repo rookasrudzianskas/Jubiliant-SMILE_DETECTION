@@ -13,15 +13,21 @@ while True:
         break
 
     frame_grayscale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    # it says how much to blur the image scale factor means and minNei... it must be 20 rectangles on one area to count as a smile
-    smiles = smile_detector.detectMultiScale(frame_grayscale, scaleFactor=1.7, minNeighbors=20)
+
 
     # faces = face_detector.detectMultiScale(frame_grayscale)
 
     faces = face_detector.detectMultiScale(frame_grayscale)
 
     for (x, y, w, h) in faces:
-        cv2.rectangle(frame, (x, y), (x + w, y + h), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
+        # cv2.rectangle(frame, (x, y), (x + w, y + h), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
+
+        the_face =
+
+        face_grayscale = cv2.cvtColor(the_face, cv2.COLOR_BGR2GRAY)
+
+        # it says how much to blur the image scale factor means and minNei... it must be 20 rectangles on one area to count as a smile
+        smiles = smile_detector.detectMultiScale(frame_grayscale, scaleFactor=1.7, minNeighbors=20)
         # find all smiles in the face
         for (x_, y_, w_, h_) in the_face:
             cv2.rectangle(frame, (x_, y_), (x_ + w_, y_ + h_), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
