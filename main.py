@@ -9,12 +9,16 @@ while True:
 
     if not successful_frame_rate:
         break
-    cv2.imshow("Why so seriour", frame)
+
+    frame_grayscale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    cv2.imshow("Why so serious?", frame_grayscale)
 
     cv2.waitKey(1)
 #
 webcam.release()
 cv2.destroyAllWindows()
+
+
 
 
 print("WHAT IS UP!!")
