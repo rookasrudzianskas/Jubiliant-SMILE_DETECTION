@@ -14,7 +14,6 @@ while True:
 
     frame_grayscale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-
     # faces = face_detector.detectMultiScale(frame_grayscale)
 
     faces = face_detector.detectMultiScale(frame_grayscale)
@@ -22,7 +21,7 @@ while True:
     for (x, y, w, h) in faces:
         # cv2.rectangle(frame, (x, y), (x + w, y + h), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
 
-        the_face =
+        the_face = frame[y:y+h, x:x+w]
 
         face_grayscale = cv2.cvtColor(the_face, cv2.COLOR_BGR2GRAY)
 
