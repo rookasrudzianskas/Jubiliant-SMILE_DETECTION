@@ -35,7 +35,7 @@ while True:
     # for (x, y, w, h) in smiles:
     #     cv2.rectangle(frame, (x, y), (x + w, y + h), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
 
-    print(faces)
+    # print(faces)
 
     cv2.imshow("Why so serious?", frame)
 
