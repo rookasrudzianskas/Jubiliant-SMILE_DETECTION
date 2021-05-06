@@ -29,7 +29,7 @@ while True:
         smiles = smile_detector.detectMultiScale(face_grayscale, scaleFactor=1.7, minNeighbors=20)
         # find all smiles in the face
         for (x_, y_, w_, h_) in smiles:
-            cv2.rectangle(frame, (x_, y_), (x_ + w_, y_ + h_), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
+            cv2.rectangle(the_face, (x_, y_), (x_ + w_, y_ + h_), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
 
     # for (x, y, w, h) in smiles:
     #     cv2.rectangle(frame, (x, y), (x + w, y + h), (randint(0, 256), randint(0, 256), randint(0, 256)), 5)
